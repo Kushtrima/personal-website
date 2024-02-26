@@ -1,0 +1,1055 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url(https://use.typekit.net/lcn2zwi.css
+);
+
+
+
+/* Base styles */
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+}
+
+.bigger-font-p {
+    font-size: 18px;
+}
+
+#dynamicLink {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+
+/* HEADER >>> -----------------------------------------------------------------*/ 
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #595959; /* Adds a slim line under the header */
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 700;
+    
+}
+
+.logo:hover {
+    color: #007bff;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: black;
+    padding: 0 19px;
+    transition: color 0.3s ease;
+    font-size: 22px;
+    
+}
+
+.nav-menu li a:hover {
+    color: #007bff;
+    font-weight: 700;
+    
+}
+
+.nav-menu a.active {
+    color: #007bff; /* Change to your desired shade of blue */
+    font-weight: 700;
+}
+
+
+
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 25px; /* Ensuring a larger clickable area */
+    height: 25px; 
+    
+}
+
+.nav-toggle .hamburger {
+    width: 25px;
+    height: 2px;
+    background: black;
+    display: block;
+    position: relative;
+    
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    background: black;
+    width: 25px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    transition: transform 0.3s ease;
+    
+}
+
+.nav-toggle .hamburger::before {
+    transform: translateY(-8px);
+    
+    
+}
+
+.nav-toggle .hamburger::after {
+    transform: translateY(8px);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Ensure this is set to none to start with */
+        position: fixed;
+        right: 0;
+        top: 163px;
+        background-color: rgb(255, 255, 255);
+        width: 100%; /* Full width */
+        flex-direction: column;
+        text-align: right;
+        border-top: 1px solid #ffffff;
+        
+    }
+
+    .nav-menu li {
+        padding: 10px 0;
+        
+    }
+
+    .nav-menu.show {
+        display: block; /* Show the menu */
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-toggle.active .hamburger {
+        background: transparent;
+    }
+
+    .nav-toggle.active .hamburger::before {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active .hamburger::after {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+/* HEADER <<< -----------------------------------------------------------------*/ 
+
+
+
+/* HERO BANNER >>>-----------------------------------------------------------------*/
+
+.hero-banner {
+    display: flex;
+    background-color: white;
+    height: 700px;
+}
+
+/* the effect of singular words >>>> ---------------------------------------------------------------*/
+
+.b {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight:400;
+}
+/* the effect of singular words <<<< ---------------------------------------------------------------*/
+
+.left-section {
+    flex: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 180px;
+    padding-right: 40px;
+    font-size: 16px;
+    z-index: 66;
+    line-height: 25px;
+}
+
+.left-sectioni {
+    
+    line-height: 25px;
+}
+
+.my-story-text {
+    font-size: 40px;
+    line-height: 35px;
+}
+
+.right-section {
+    flex: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+.right-section-edu {
+    flex: 40%;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 20px;
+    box-sizing: border-box; */
+    
+}
+
+.bottom-right-edu img {
+    width: 600;
+    height: 600px;
+}
+
+.kushtrimarifi {
+
+    font-size: 55px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:lighter;
+    text-align: end;
+}
+
+.bottom-right img {
+    width: 350;
+    height: 450px;
+}
+
+@media (max-width: 768px) {
+
+    .hero-banner {
+        flex-direction: column;
+        height: auto;
+        
+    }
+
+    .left-section,
+    .right-section, h1, p {
+        flex: 100%;
+        margin-top: 50px; 
+
+    }
+
+    .bottom-right, img {
+        height: 300px;
+        
+    }
+
+}
+
+@media (max-width: 414px) {
+
+    .hero-banner {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section, h1, p {
+        flex: 100%;
+        margin-top: 50px; 
+    }
+    
+
+    .bottom-right img {
+        height: 300px;
+    }
+}
+
+/* Responsivenes only for images on pages: Education and Project ---------*/
+
+@media only screen and (max-width: 480px) {
+    .bottom-right-edu img {
+        width: 100%; 
+        height: auto; 
+        padding: 20px;
+    }
+}
+
+/* Responsivenes only for images on pages: Education and Project ---------*/
+
+/* HERO BANNER <<< -----------------------------------------------------------------*/
+
+
+
+/* line under the banner ----------------------------------------------------------------- */
+
+.half-width-line {
+    width: 57%; /* Sets the line width to 50% of its container's width */
+    height: 1px; /* Adjusts the thickness of the line */
+    background-color: black; /* Sets the line color */
+    margin: 0 auto; /* Centers the line horizontally */
+    margin-left: 0;
+}
+
+
+.half-width-linee {
+    width: 20%; /* Sets the line width to 50% of its container's width */
+    height: 1px; /* Adjusts the thickness of the line */
+    background-color: black; /* Sets the line color */
+    margin: 0 auto; /* Centers the line horizontally */
+    margin-left: 0;
+}
+
+/* line under the banner -----------------------------------------------------------------*/
+
+
+
+/* MY TOOLBOX -----------------------------------------------------------------*/ 
+
+
+.slider-wrapper {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    font-size: 31px;
+    font-weight: 200;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 18px;
+    padding-bottom: 100px;
+    padding-top: 10px;
+}
+
+.fixed-text {
+    margin-right: 10px; /* Adjust the space between fixed text and the slider */
+    white-space: nowrap;
+    color: #bdbdbd;
+    font-weight: 200;
+}
+
+.slider {
+    position: relative;
+    height: 50px; /* Height of each sliding text */
+}
+
+.slider-text {
+    position: absolute;
+    opacity: 0; /* Start with text not visible */
+    transform: translateY(100%); /* Start below the view */
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+@keyframes slide {
+    0%, 100% { 
+    opacity: 0; 
+    transform: translateY(100%); /* Slide up from below */
+    }
+    10%, 20% { 
+    opacity: 1; 
+    transform: translateY(0); /* Stay in place when fully visible */
+    }
+    30%, 90% { 
+    opacity: 0; 
+    transform: translateY(-100%); /* Slide out to the top */
+    }
+}
+
+
+  /* Speeding up the animation to last 10 seconds instead of 30 */
+.slider-text {
+    animation-duration: 9s; /* Total animation time */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+ /* Stagger the animations for 14 items */
+.slider-text:nth-child(1) { animation-name: slide; animation-delay: 0s; }
+.slider-text:nth-child(2) { animation-name: slide; animation-delay: 1.66s; }
+.slider-text:nth-child(3) { animation-name: slide; animation-delay: 3.33s; }
+.slider-text:nth-child(4) { animation-name: slide; animation-delay: 5s; }
+.slider-text:nth-child(5) { animation-name: slide; animation-delay: 6.66s; }
+.slider-text:nth-child(6) { animation-name: slide; animation-delay: 8.33s; }
+.slider-text:nth-child(7) { animation-name: slide; animation-delay: 10s; }
+.slider-text:nth-child(8) { animation-name: slide; animation-delay: 11.66s; }
+.slider-text:nth-child(9) { animation-name: slide; animation-delay: 13.33s; }
+.slider-text:nth-child(10) { animation-name: slide; animation-delay: 15s; }
+.slider-text:nth-child(11) { animation-name: slide; animation-delay: 16.66s; }
+.slider-text:nth-child(12) { animation-name: slide; animation-delay: 18.33s; }
+.slider-text:nth-child(13) { animation-name: slide; animation-delay: 20s; }
+.slider-text:nth-child(14) { animation-name: slide; animation-delay: 21.66s; }
+
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) { /* For tablets */
+    .slider-wrapper {
+    font-size: 30px; /* Smaller font size for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-wrapper {
+        font-size: 22px; /* Adjusted font size for smartphones */
+        text-align: left; /* Align text to the left */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the start to ensure text alignment is consistent */
+        padding-left: 0; /* Adjust padding if necessary */
+        padding-left: 20px;
+        padding-top: 100px;
+        
+    }
+
+    @media (max-width: 480px) {
+        .half-width-line {
+            width: 50%; /* Make the line full width to better fit mobile screens */
+            margin-top: 160px; /* Add some space above the line to push it below the images */
+        }
+    }
+    
+    .fixed-text {
+        margin-bottom: 10px; /* Adjust spacing for stacked layout */
+        margin-top: 30px; /* Added space above the fixed text */
+        margin-right: 0; /* Adjust or remove right margin as needed */
+        padding-left: 0px;
+    }
+}
+
+
+/* MY TOOLBOX <<< -----------------------------------------------------------------*/ 
+
+
+
+
+/* THREE BOXES >>> -----------------------------------------------------------------*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows boxes to wrap on smaller screens */
+    justify-content: center;
+    gap: 10px; /* Adjusts the space between the boxes */
+    background-color: rgb(255, 255, 255); /* Sets the background to white */
+    padding: 60px; /* Adds some padding around the boxes */
+    padding-top: 50px;
+    padding-bottom: 80px;
+    width: 100%; /* Ensure it spans full width */
+    }
+    
+
+
+@keyframes changeColors {
+    0% { border-color: rgb(0, 0, 0); }
+    25% { border-color:#007bff }
+    50% { border-color: rgb(0, 0, 0); }
+    75% { border-color:#007bff}
+    100% { border-color: rgb(0, 0, 0); }
+}
+
+.box {
+    flex: 1 1 200px; /* Allows boxes to grow and shrink but not smaller than 200px */
+    border: 1px solid rgb(0, 0, 0);
+    padding: 20px; /* Adds some padding inside the boxes */
+    background-color: rgb(255, 255, 255); /* Sets the background color to white */
+    transition: border-right 0.3s, border-bottom 0.3s; /* Adds a transition effect for the borders */
+    animation: changeColors 5s infinite;
+}
+
+  /* Adds a black border on the right side and bottom when the mouse hovers over the box */
+.box:hover {
+    border-right: 6px solid black;
+    border-left: 1px solid black;
+    border-bottom: 6px solid black;
+    border-top: 1px solid black;
+}
+
+h5 {
+    color: rgb(0, 0, 0); /* Sets the heading text to black */
+    margin-bottom: 10px; /* Adds some margin below the heading */
+}
+
+
+
+p {
+    color: rgb(0, 0, 0); /* Sets the paragraph text to black */
+}
+
+  /* Media Queries */
+
+  /* For tablets and below */
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack the boxes vertically */
+      padding: 20px; /* Reduces padding */
+    }
+
+    .box {
+      width: auto; /* Full width */
+      margin-bottom: 10px; /* Adds some space between vertically stacked boxes */
+    }
+}
+
+  /* For smartphones */
+@media (max-width: 480px) {
+    .container {
+      padding: 20px; /* Further reduces padding for smaller screens */
+    }
+
+    .box {
+      padding: 10px; /* Reduces padding inside the boxes for smaller screens */
+    }
+
+    .box:hover {
+        border-right: 4px solid black;
+        border-left: 1px solid black;
+        border-bottom: 4px solid black;
+        border-top: 1px solid black;
+    }
+}
+
+
+/* THREE BOXES <<< -----------------------------------------------------------------*/
+
+
+
+
+/* SKILLS >>> -----------------------------------------------------------------*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows boxes to wrap on smaller screens */
+    justify-content: center;
+    gap: 10px; /* Adjusts the space between the boxes */
+    background-color: rgb(255, 255, 255); /* Sets the background to white */
+    padding: 60px; /* Adds some padding around the boxes */
+    padding-top: 50px;
+    padding-bottom: 80px;
+    width: 100%; /* Ensure it spans full width */
+    }
+    
+
+
+
+
+.boxi {
+    flex: 1 1 200px; /* Allows boxes to grow and shrink but not smaller than 200px */
+
+    padding: 20px; /* Adds some padding inside the boxes */
+    background-color: rgb(255, 255, 255); /* Sets the background color to white */
+    transition: border-right 0.3s, border-bottom 0.3s; /* Adds a transition effect for the borders */
+    animation: changeColors 5s infinite;
+}
+
+
+h5 {
+    color: rgb(0, 0, 0); /* Sets the heading text to black */
+    margin-bottom: 10px; /* Adds some margin below the heading */
+}
+
+
+
+p {
+    color: rgb(0, 0, 0); /* Sets the paragraph text to black */
+}
+
+  /* Media Queries */
+
+  /* For tablets and below */
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack the boxes vertically */
+      padding: 20px; /* Reduces padding */
+    }
+
+    .box {
+      width: auto; /* Full width */
+      margin-bottom: 10px; /* Adds some space between vertically stacked boxes */
+    }
+}
+
+  /* For smartphones */
+@media (max-width: 480px) {
+    .container {
+      padding: 20px; /* Further reduces padding for smaller screens */
+    }
+
+    .box {
+      padding: 10px; /* Reduces padding inside the boxes for smaller screens */
+    }
+
+    
+}
+
+
+/* SKILLS <<< -----------------------------------------------------------------*/
+
+
+
+
+
+
+
+/* MY LATEST PROJECT HOME >>>----------------------------------------------------------*/
+
+:root {
+    --clr-shade: #242526;
+    --clr-light: #f6f6f6;
+    --ff-display: "Hoverunit", cursive;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+section.container__outer {
+    display: grid;
+    min-height: 600px;
+    place-items: center;
+    padding-block: 3rem;
+    display: flex;
+    flex-wrap: wrap; /* Allows boxes to wrap on smaller screens */
+    justify-content: center;
+    gap: 10px; /* Adjusts the space between the boxes */
+    background-color: rgb(255, 255, 255); /* Sets the background to white */
+    padding: 60px; /* Adds some padding around the boxes */
+    padding-top: 50px;
+    padding-bottom: 80px;
+    width: 100%; /* Ensure it spans full width */
+}
+
+#content__core {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width:  max-content;
+}
+
+.profile__card {
+    border: 1px solid hsl(0, 0%, 0%, 0.25);
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+}
+
+.profile__card a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.profile__card img {
+    display: block;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 255ms ease-in-out;
+    width: 101%;
+    z-index: 0;
+}
+
+.profile__card:hover img {
+    top: -2rem;
+}
+
+.profile__card a .profile__caption {
+    background-color: hsl(0, 0%, 0%, 0);
+    display: grid;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 300px;
+    transition-property: all;
+    transition-duration: 0.2s;  
+    width: 100%;  
+    z-index: 10;  
+}
+
+.profile__card a:hover .profile__caption {
+    background-color: hsla(0, 0%, 0%, 0.885);
+    top: 0;
+    transition: all 2s;
+}
+
+.profile__card a .profile__caption h2 {
+    color: var(--clr-light);
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 0 var(--clr-shade), -1px -1px 0 var(--clr-shade), -1px 1px 0 var(--clr-shade), 1px -1px 0 var(--clr-shade);
+}
+
+.profile__card a .profile__caption p {
+    color: var(--clr-light);
+    display: none;
+    font-size: smaller;
+    transition: all 0.2s;
+    width: 90%;
+}
+
+.profile__card a:hover .profile__caption p {
+    display: block;
+}
+
+
+
+/* Base styles are already defined in your initial code. */
+
+section.container__outer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Adjusts the space between the boxes */
+    padding: 20px; /* Adjusts padding */
+    box-sizing: border-box; /* Ensures padding does not add to the width */
+}
+
+.profile__card {
+    flex: 0 0 300px; /* Does not grow, does not shrink, starts at 300px width */
+    margin-bottom: 20px; /* Adds space between stacked cards */
+}
+
+/* Adjusts layout for smaller screens without changing card dimensions */
+@media only screen and (max-width: 768px) {
+    .profile__card, .app-title, .app-desc {
+        margin: 0 auto 20px; /* Centers cards horizontally and adds space between them */
+        padding-top: 20px;
+    }
+
+    #content__core, .app-title, .app-desc {
+        justify-content: center; /* Centers content in the core area */
+        text-align: center;
+        padding-top: 20px;
+    }
+
+}
+
+
+
+
+/* MY LATEST PROJECT HOME <<<----------------------------------------------------------*/
+
+
+
+
+/* EDUCATION, CERTIFICATION & WORK EXPERIENCE >>>----------------------------------------------*/
+
+@layer base {
+	*,
+	*:after,
+	*:before {
+		box-sizing: border-box;
+	}
+
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.edu-header {
+		padding-top: 54px;
+        position: sticky;
+		top: 0;
+        z-index: 4;
+        background: linear-gradient(white 50%, transparent);
+        margin-bottom: 4rem;
+	}
+
+    .explain-sub-text {
+        font-size: 20px;
+    }
+
+
+	ol {
+		cursor: auto;
+		padding: 0;
+		margin: 0;
+
+
+/*		list-style-position: inside;*/
+	}
+
+	.eyes {
+		transform-box: fill-box;
+		transform-origin: 50% 50%;
+		animation: blink 6s infinite linear;
+	}
+
+	.eyes {
+		animation-delay: -2s;
+	}
+
+	@keyframes blink {
+		0%,
+		46%,
+		48%,
+		50%,
+		100% {
+			scale: 1 1;
+		}
+		47%,
+		49% {
+			scale: 1 0.01;
+		}
+	}
+	
+	@counter-style pad-tens {
+	system: extends decimal;
+	suffix: ". ";
+	ad: 2 "0";
+	}
+
+	.edu-list :not(:last-of-type) {
+		border-bottom: 2px solid hsl(0 0% 10% / 0.5);
+
+	}
+
+	.edu-list::marker {
+		font-size: clamp(.875rem, 1vw + 1rem, 2rem);
+		font-family: monospace;
+		vertical-align: middle;
+		font-weight: 100;
+		color: hsl(0 0% 10% / 0.5);
+	}
+
+	main {
+		flex: 1;
+	}
+
+	:root {
+		--font-size: clamp(2rem, 8vw + 1rem, 10rem);
+	}
+
+	.edu {
+		font-size: var(--font-size);
+    margin: 0;
+	}
+
+    .sub-text {
+        font-size: 25px;
+        text-decoration: none;
+    }
+    
+    .work-exp {
+        font-weight: 200;
+    }
+
+	.edu span:nth-of-type(1) {
+		font-size: 1.5rem;
+		opacity: 0.5;
+	}
+	.edu span:nth-of-type(2) {
+		font-size: clamp(1.875rem, 4vw + 1rem, 2rem);
+		text-transform: uppercase;
+	}
+
+	.edu-list:is(:hover, :focus-within) {
+		opacity: 1;
+		z-index: 2;
+	}
+
+	.edu-list :hover {
+		--active: 1;
+	}
+	.edu-list:has(~ .edu-list:is(:hover, :focus-within)),
+	.edu-list:is(:hover, :focus-within) ~ .edu-list {
+		opacity: 0.25;
+	}
+
+	.edu-list img {
+		opacity: var(--active, 0);
+		position: fixed;
+		pointer-events: none;
+		left: calc(var(--x) * 1px);
+		top: calc(var(--y) * 1px);
+		translate: -50% -50%;
+		cursor: none;
+		border-radius: 6px;
+    z-index: 6;
+	}
+
+	a {
+		padding: 2rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		text-decoration: none;
+		color: hsl(0 0% 10%);
+		font-weight: 300;
+		cursor: pointer;
+	}
+
+	.edu-list:is(:hover, :focus-within) {
+		border-bottom-color: #0000;
+	}
+
+	a:focus-visible {
+		outline-color: hsl(0 100% 50%);
+		outline-offset: 0.5rem;
+	}
+
+	a span {
+		font-size: clamp(.875rem, 0.5vw + 1rem, 2rem);
+		flex: 0 0 auto;
+	}
+
+	ol {
+		font-size: clamp(1.25rem, 2vw + 1rem, 2rem);
+	}
+
+	.edu-list {
+		position: relative;
+	}
+
+	:root:has(.edu-list:nth-of-type(10)) {
+		ol {
+		list-style-type: pad-tens;
+		}
+	}
+
+	section {
+		width: 800px;
+		max-width: calc(100% - 8rem);
+		margin: 0 auto;
+	}
+
+	
+}
+
+/* EDUCATION, CERTIFICATION & WORK EXPERIENCE <<<----------------------------------------------*/
+
+
+
+
+/* FOOTER >>> ------------------------------------------------------------------------------------ */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(240, 240, 240); /* Example background color */
+    color: rgb(0, 0, 0);
+    padding: 1px;
+    line-height: 25px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 30px;
+}
+
+.footer-h3 {
+    font-weight: 400;
+}
+
+.footer-section h1, 
+.footer-section h3, 
+.footer-section p {
+    margin: 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+  /* Responsive styles */
+  @media (max-width: 768px) { /* Adjust for iPads */
+    .footer {
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left */
+    }
+    .footer-section {
+    width: 100%; /* Make sure the section spans the full width */
+    margin-bottom: 20px;
+    }
+    .social-icons {
+      justify-content: flex-start; /* Align social icons to the left */
+    }
+}
+
+  @media (max-width: 480px) { /* Adjust for smartphones */
+    .footer-section {
+        margin: 0px; /* Remove margins for a full-width section */
+        padding: 20px;
+    }
+}
+
+.line-footer {
+    border: 0;
+    height: 1px; /* You can set the height for the thickness of the line */
+    background-color: #000000; /* Black color */
+    margin-top: 10px; /* Space above the line */
+    margin-bottom: 10px; /* Space below the line */
+    width: 100%; /* Sets the line width to 50% of its container's width */
+    height: 1px; /* Adjusts the thickness of the line */
+    background-color: rgb(0, 0, 0); /* Sets the line color */
+    margin: 0 auto; /* Centers the line horizontally */
+    margin-left: 0;
+    margin-top: 31px;
+}
+
+hr {
+    border: 0;
+    height: 1px; 
+    background-color: #000000; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    width: 100%; 
+    height: 1px; 
+    background-color: rgb(0, 0, 0); 
+    margin: 0 auto; 
+    margin-left: 0;
+    margin-top: 31px;
+    color: #000000;
+}
+
+.line-footer {
+    border: none;
+    height: 1px;
+    background-color: #000000; /* Line color */
+    margin: 0 0 5px 0; /* Adjust top and bottom margins as needed, add space between the line and icons */
+    color: #000000;
+}
+
+.social-icons {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    justify-content: flex-start; /* Align container content to the start (left) */
+}
+
+.social-icons a {
+    color: #000000; /* Icon color */
+    font-size: 24px; /* Icon size */
+    margin-right: 10px; /* Space between icons */
+}
+
+.social-icons a:hover {
+    color: #6a6969; 
+}
+/* FOOTER <<< ------------------------------------------------------------------------------------ */
+
+
+
